@@ -46,4 +46,18 @@ module.exports = function (app) {
       })
     }
   })
+  // route to get api from 
+  app.post('/api/parks', function (req, res) {
+    // infor from form
+    var frontEndData = req.body
+    var queryUrl = ''
+    axios.get(queryUrl).then(function (data) {
+      // retreive data
+      res.json({
+        parks: data
+      })
+    })
+    // we need to call api with axios and pass some values from front end
+
+  })
 }

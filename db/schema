@@ -1,5 +1,5 @@
-CREATE DATABASE campground_db;
-USE campground_db;
+CREATE DATABASE campgrounds_db;
+USE campgrounds_db;
 
 CREATE TABLE Camper,
 (
