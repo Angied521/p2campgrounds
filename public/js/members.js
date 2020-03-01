@@ -5,7 +5,7 @@ $(document).ready(function () {
   /// create an on click for submit button
 $("#searchBtn").on("click", function(){
      
-//// on click not complete
+
     
    $.ajax({
      url:"api/parks/"+$("#state").val(),
@@ -13,6 +13,8 @@ $("#searchBtn").on("click", function(){
    }).then(function(data){
      console.log(data)
    })
+
+
 
     
 })
