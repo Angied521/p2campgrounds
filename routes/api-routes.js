@@ -1,7 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require('../models')
 var passport = require('../config/passport')
-
+var axios = require("axios")
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
@@ -59,5 +59,16 @@ module.exports = function (app) {
     })
     // we need to call api with axios and pass some values from front end
 
+  })
+
+
+  app.get("/api/parks/:stateCode", function (req,res){
+    var stateCode = req.params.stateCode
+
+    axios.get("https://developer.nps.gov/api/v1/parks?stateCode="+stateCode+"&api_key=omVSWmotUaRLimR5vkKrFn1mk3BMf3xge5Xyyb7P").then(function(response){
+      // console.log(response.data)
+    console.log(response.data.total)
+      res.json(response.data)
+    })
   })
 }

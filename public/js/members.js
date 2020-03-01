@@ -3,12 +3,16 @@ $(document).ready(function () {
   // and updates the HTML on the page
 
   /// create an on click for submit button
-$("submit").on("click", function(){
-    var parkOptions = {
-      camper: $("#").val()
-    }
+$("#searchBtn").on("click", function(){
+     
 //// on click not complete
-
+    
+   $.ajax({
+     url:"api/parks/"+$("#state").val(),
+     method:"GET"
+   }).then(function(data){
+     console.log(data)
+   })
 
     
 })
