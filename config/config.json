@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "password",
-    "database": "campgrounds_db",
-    "host": "localhost",
+   "username": "en3hhn7hgxlzaqfc",
+    "password": "pukm2gjggwh4k5vq",
+    "database": "xh54pygrdvglkf8q",
+    "host": "kil9uzd3tgem3naa.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
