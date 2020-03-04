@@ -46,8 +46,4 @@ module.exports = function (app) {
       })
     }
   })
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master
