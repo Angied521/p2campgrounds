@@ -1,26 +1,41 @@
-$(document).ready(function () {
-  // This file just does a GET request to figure out which user is logged in
-  // and updates the HTML on the page
+/* eslint-disable */
+document.addEventListener("DOMContentLoaded", function(){
 
-  /// create an on click for submit button
-$("#searchBtn").on("click", function(){
-     
+  let button = document.querySelector('#searchBtn')
 
-    
-   $.ajax({
-     url:"api/parks/"+$("#state").val(),
-     method:"GET"
-   }).then(function(data){
-     console.log(data)
-   })
+  const makeGetRequest = function(){
+    let stateCode = document.querySelector('#state').value
+    const radioBtns = document.querySelectorAll('.form-check-input')
+    let searchTarget;
+    const getTarget = radioBtns.forEach( a => {
+      if(a.checked === true){ 
+         searchTarget = a.value
+      }
+    })
+    if(searchTarget === 'Park'){
+      axios.get(`https://developer.nps.gov/api/v1/parks?stateCode=${stateCode}&api_key=omVSWmotUaRLimR5vkKrFn1mk3BMf3xge5Xyyb7P`)
+      .then( res => {
+        console.log(res.data.data)
+        const respArr = res.data.data
+        respArr.forEach( element => {
+          let singleEl = document.createElement('div')
+          let elTwo = document.createElement('div')
+          singleEl.textContent = `name:${element.name}`
+          elTwo.textContent = `weatherinfo:${element.weatherInfo}`
 
+          let container = document.createElement('div')
 
+          container.appendChild(singleEl)
+          container.appendChild(elTwo)
 
-    
-})
+          let parent = document.querySelector('#display')
 
-  // then execute this
-  $.get('/api/parks').then(function (data) {
-   console.log(data)
-  })
-})
+          parent.appendChild(container)
+        })
+      })
+    }
+  }
+
+  button.addEventListener('click', makeGetRequest)
+
+});
