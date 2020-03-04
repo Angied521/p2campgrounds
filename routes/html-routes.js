@@ -29,6 +29,4 @@ module.exports = function (app) {
 
   // app.get("/parks", function (req,res){
   //   res.sendFile(path.join(__dirname, "../public/parks.html"))
-
 }
-
