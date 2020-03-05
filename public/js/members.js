@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
           respArr.forEach(element => {
             let singleEl = document.createElement('div')
             let elTwo = document.createElement('div')
-            singleEl.textContent = `name:${element.name}`
-            elTwo.textContent = `weatherinfo:${element.weatherInfo}`
+            singleEl.textContent = `National Park Name: ${element.name}`
+            elTwo.textContent = `Details: ${element.description}`
 
             let container = document.createElement('div')
 
@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
           respArr.forEach(element => {
             let singleEl = document.createElement('div')
             let elTwo = document.createElement('div')
-            singleEl.textContent = `name:${element.name}`
-            elTwo.textContent = `descripton:${element.regulationsoverview}`
+            singleEl.textContent = `Campground Name: ${element.name}`
+            elTwo.textContent = `Details: ${element.regulationsoverview}`
 
             let container = document.createElement('div')
 
@@ -80,8 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
           respArr.forEach(element => {
             let singleEl = document.createElement('div')
             let elTwo = document.createElement('div')
-            singleEl.textContent = `Event Name:${element.title}`
-            elTwo.textContent = `description:${element.description}`
+            singleEl.textContent = `Event Name: ${element.title}`
+            elTwo.textContent = `Location: ${element.location}`
 
             let container = document.createElement('div')
 
