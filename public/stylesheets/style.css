@@ -10,7 +10,13 @@ body {
   background-image: url("../stylesheets/forest\ header.jpg");
   background-repeat: no-repeat;
   background-size:cover ;
-  height: 100vh;
+  height: 75vh;
   position: relative;
+  
 }
 
+#display {
+  font-size: large;
+  margin-left: 150px;
+ 
+}
