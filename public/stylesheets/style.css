@@ -38,3 +38,8 @@ h1,h3 {
   margin-left: 1000px;
   margin-top: 145px;
 }
+
+.form-check-label {
+  color: white;
+  font-size: medium;
+}
