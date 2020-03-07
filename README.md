@@ -6,7 +6,7 @@
 
 
 ### Concept
-#### Description: 
+### Description: 
 ### Motivation for Design: As a group we picked out some hobbies we have and decided to do a search on them using the NPS web developer resources.
 ### User Story
 
