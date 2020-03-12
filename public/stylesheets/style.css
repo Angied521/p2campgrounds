@@ -24,7 +24,7 @@ body{
 
 }
 
-h1,h3 {
+h1,h3,h2 {
   margin-left: 150px;
 }
 
@@ -48,3 +48,9 @@ h1,h3 {
 container-body {
   max-width: 500px;
 }
+.card {
+  padding: 10px;
+  border: black 2px solid;
+  margin: 10px;
+}
+
