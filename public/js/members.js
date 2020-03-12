@@ -79,12 +79,14 @@ document.addEventListener("DOMContentLoaded", function () {
           const respArr = res.data.data
           respArr.forEach(element => {
             let singleEl = document.createElement('div')
+            singleEl.setAttribute('class','card-body')
             let elTwo = document.createElement('div')
             singleEl.textContent = `Event Name: ${element.title}`
             elTwo.textContent = `Location: ${element.location}`
 
             let container = document.createElement('div')
-
+            container.setAttribute('class', 'card')
+          
             container.appendChild(singleEl)
             container.appendChild(elTwo)
 
